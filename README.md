@@ -39,4 +39,10 @@ In the following, we provide several reputation rankings computed from data samp
 # Weighting transactions
 Newer transactions should be weighted higher than old ones. The weighting function should be increasing and bounded as block height increases. [Logistic functions](https://en.wikipedia.org/wiki/Logistic_function) are good candidates. 
 
+Problem setting:
+- Consider transactions collected within a specific timeframe, e.g. 1 year = 360 days.
+- Day variable is 'x' centering at 0.
+- Weighting function by a logistic curve: W = a/(1+2^(-b*x)), where a>0 and 0<b<1 are adjusting parameters
+https://www.desmos.com/calculator/hyzbkqhj0u
+![Logistic curves](https://user-images.githubusercontent.com/45308207/203902122-6edf2bbc-4648-426b-9444-2eb06f3ae89b.png)
 
